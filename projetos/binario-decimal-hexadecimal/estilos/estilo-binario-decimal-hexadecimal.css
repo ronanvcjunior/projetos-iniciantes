@@ -1,0 +1,81 @@
+body {
+    background: #404040;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    margin: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 3rem;
+    border-radius: 1em;
+}
+
+.box h3 {
+    display: inline;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box select {
+    width: 264px;
+    height: 2em;
+    border: none;
+    background: transparent;
+    font-size: 1.25em;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.box div {
+    display: grid;
+    max-width: 500px;
+
+    grid:
+    'span span'
+    'input button'
+    'output output'
+    ;
+}
+
+.box div #input {
+    grid-area: input;
+    background-color: #111;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #ddd;
+    padding: 0 4px;
+}
+
+.box div button {
+    grid-area: button;
+    border: none;
+    color: #ddd;
+    font-weight: bold;
+    background-color: #9933ff;
+    border-radius: 4px;
+    margin-left: 1em;
+}
+
+.box div button:hover {
+    background-color: #7300e6;
+}
+
+.box div #output {
+    grid-area: output;
+    background-color: #111;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #9933ff;
+    margin-top: 1em;
+    padding: 0 4px;
+}
+
+.box div span {
+    grid-area: span;
+    font-size: 0.7rem;
+    color: red;
+}

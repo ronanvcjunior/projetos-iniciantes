@@ -1,0 +1,42 @@
+body {
+    background-color: #33cc33;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.box h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 6rem;
+    text-align: center;
+}
+
+.box ul li {
+    cursor: pointer;
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
+    font-size: 1.2rem;
+}
+
+.box ul li+li {
+    border-top: 1px solid ;
+}
+
+
+.box ul li:hover::before {
+    content: '\1405';
+    padding-right: 0.2rem;
+    text-decoration:none;
+}
+
+@media (min-width: 1200px) {
+    .box {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        border-radius: 2rem;
+        padding-bottom: 1rem;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Conversor</title>
+    <link rel="icon" href="imagens/es6-logo.png">
+
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="estilos/estilo-binario-decimal-hexadecimal.css">
+</head>
+<body>
+
+    <section class="box ">
+        <h3>Converter:</h3>
+
+        <select name="" id="tipoConversao">
+            <option value="bin2dec">Binário para Decimal</option>
+            <option value="bin2hex">Binário para Hexadecimal</option>
+            <option value="dec2bin">Decimal para Binário</option>
+            <option value="dec2hex">Decimal para Hexadecimal</option>
+            <option value="hex2bin">Hexadecimal para Binário</option>
+            <option value="hex2dec">Hexadecimal para Decimal</option>
+        </select>
+
+        <div>
+            <span id="span"></span>
+            <input id="input" type="text" name="" id="">
+
+            <button type="submit" onclick="converter()">Converter</button>
+
+            <input id="output" type="text" name="" id="" readonly>
+        </div>
+        
+    </section>
+    
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="js/js-projetos.js"></script>
+</body>
+</html>
