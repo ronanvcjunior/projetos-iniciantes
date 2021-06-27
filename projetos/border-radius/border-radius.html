@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Borda</title>
+
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="estilos/estilo-border-radius.css">
+</head>
+<body>
+    <section class="box">
+        <div id="caixa">
+            <div id="track-top"></div>
+            <input type="range" min="0" max="100" value="10" id="slider-top-1" oninput="borderTop()">
+            <input type="range" min="0" max="100" value="90" id="slider-top-2" oninput="borderTop()">
+
+            <div id="track-right"></div>
+            <input type="range" min="0" max="100" value="10" id="slider-right-1" oninput="borderRight()">
+            <input type="range" min="0" max="100" value="90" id="slider-right-2" oninput="borderRight()">
+
+            <div id="track-bottom"></div>
+            <input type="range" min="0" max="100" value="10" id="slider-bottom-1" oninput="borderBottom()">
+            <input type="range" min="0" max="100" value="90" id="slider-bottom-2" oninput="borderBottom()">
+
+            <div id="track-left"></div>
+            <input type="range" min="0" max="100" value="10" id="slider-left-1" oninput="borderLeft()">
+            <input type="range" min="0" max="100" value="90" id="slider-left-2" oninput="borderLeft()">
+
+            <div  id="borderBox">
+
+            </div>
+        </div>
+    </section>
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="js/js-border-radius.js"></script>
+</body>
+</html>
