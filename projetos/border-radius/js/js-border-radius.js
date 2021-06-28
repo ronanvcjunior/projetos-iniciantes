@@ -45,12 +45,6 @@ function borderTop() {
     borderTopOne = Math.round(parseFloat(sliderTopOne.value))
     borderTopTwo = Math.round(parseFloat(sliderTopTwo.value))
 
-    if(borderTopOne > borderTopTwo){
-        let mudança = borderTopOne
-        borderTopOne = borderTopTwo
-        borderTopTwo = mudança
-    }
-
     borderTopTwo = 100 - borderTopTwo
 
     borderBox.style.borderRadius = `${borderTopOne}% ${borderTopTwo}% ${borderBottomTwo}% ${borderBottomOne}% / ${borderLeftTwo}% ${borderRightTwo}% ${borderRightOne}% ${borderLeftOne}%`
@@ -61,12 +55,6 @@ function borderTop() {
 function borderRight() {
     borderRightOne = Math.round(parseFloat(sliderRightOne.value))
     borderRightTwo = Math.round(parseFloat(sliderRightTwo.value))
-
-    if(borderRightOne > borderRightTwo){
-        let mudança = borderRightOne
-        borderRightOne = borderRightTwo
-        borderRightTwo = mudança
-    }
 
     borderRightTwo = 100 - borderRightTwo
 
@@ -79,12 +67,6 @@ function borderBottom() {
     borderBottomOne = Math.round(parseFloat(sliderBottomOne.value))
     borderBottomTwo = Math.round(parseFloat(sliderBottomTwo.value))
 
-    if(borderBottomOne > borderBottomTwo){
-        let mudança = borderBottomOne
-        borderBottomOne = borderBottomTwo
-        borderBottomTwo = mudança
-    }
-
     borderBottomTwo = 100 - borderBottomTwo
 
     borderBox.style.borderRadius = `${borderTopOne}% ${borderTopTwo}% ${borderBottomTwo}% ${borderBottomOne}% / ${borderLeftTwo}% ${borderRightTwo}% ${borderRightOne}% ${borderLeftOne}%`
@@ -95,12 +77,6 @@ function borderBottom() {
 function borderLeft() {
     borderLeftOne = Math.round(parseFloat(sliderLeftOne.value))
     borderLeftTwo = Math.round(parseFloat(sliderLeftTwo.value))
-
-    if(borderLeftOne > borderLeftTwo){
-        let mudança = borderLeftOne
-        borderLeftOne = borderLeftTwo
-        borderLeftTwo = mudança
-    }
     
     borderLeftTwo = 100 - borderLeftTwo
 
