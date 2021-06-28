@@ -5,6 +5,8 @@ window.onload = function(){
     borderLeft()
 
     AlernativeSize()
+    check()
+    reZise()
 }
 
 let sliderTopOne = document.getElementById("slider-top-1")
@@ -33,6 +35,12 @@ let borderBottomTwo = 10
 let borderLeftOne = 10
 let borderLeftTwo = 10
 
+let borderInput = document.getElementById("borderInput")
+
+let checkBox = document.getElementById('check')
+let inputWidth = document.getElementById("inputWidth")
+let inputHeight = document.getElementById("inputHeight")
+
 function borderTop() {
     borderTopOne = Math.round(parseFloat(sliderTopOne.value))
     borderTopTwo = Math.round(parseFloat(sliderTopTwo.value))
@@ -46,6 +54,8 @@ function borderTop() {
     borderTopTwo = 100 - borderTopTwo
 
     borderBox.style.borderRadius = `${borderTopOne}% ${borderTopTwo}% ${borderBottomTwo}% ${borderBottomOne}% / ${borderLeftTwo}% ${borderRightTwo}% ${borderRightOne}% ${borderLeftOne}%`
+
+    InputBorder()
 }
 
 function borderRight() {
@@ -61,6 +71,8 @@ function borderRight() {
     borderRightTwo = 100 - borderRightTwo
 
     borderBox.style.borderRadius = `${borderTopOne}% ${borderTopTwo}% ${borderBottomTwo}% ${borderBottomOne}% / ${borderLeftTwo}% ${borderRightTwo}% ${borderRightOne}% ${borderLeftOne}%`
+
+    InputBorder()
 }
 
 function borderBottom() {
@@ -76,6 +88,8 @@ function borderBottom() {
     borderBottomTwo = 100 - borderBottomTwo
 
     borderBox.style.borderRadius = `${borderTopOne}% ${borderTopTwo}% ${borderBottomTwo}% ${borderBottomOne}% / ${borderLeftTwo}% ${borderRightTwo}% ${borderRightOne}% ${borderLeftOne}%`
+
+    InputBorder()
 }
 
 function borderLeft() {
@@ -91,6 +105,8 @@ function borderLeft() {
     borderLeftTwo = 100 - borderLeftTwo
 
     borderBox.style.borderRadius = `${borderTopOne}% ${borderTopTwo}% ${borderBottomTwo}% ${borderBottomOne}% / ${borderLeftTwo}% ${borderRightTwo}% ${borderRightOne}% ${borderLeftOne}%`
+
+    InputBorder()
 }
 
 function AlernativeSize() {
@@ -112,4 +128,59 @@ function AlernativeSize() {
     sliderLeftTwo.style.width = `${borderBoxHeight}px`
     sliderLeftOne.style.left = `${-borderBoxHeight/2 + 3}px`
     sliderLeftTwo.style.left = `${-borderBoxHeight/2 + 3}px`
+}
+
+function InputBorder() {
+    borderInput.value = `${borderTopOne}% ${borderTopTwo}% ${borderBottomTwo}% ${borderBottomOne}% / ${borderLeftTwo}% ${borderRightTwo}% ${borderRightOne}% ${borderLeftOne}%`
+}
+
+function copyBorder() {
+    borderInput.select()
+    borderInput.setSelectionRange(0, 9999)
+    document.execCommand("copy")
+}
+
+function check() {
+    if (checkBox.checked == true) {
+        inputWidth.readOnly = false
+        inputHeight.readOnly = false
+
+        inputWidth.style.cursor = 'auto'
+        inputHeight.style.cursor = 'auto'
+
+        inputWidth.style.userSelect = 'auto'
+        inputHeight.style.userSelect = 'auto'
+    } else {
+        inputWidth.readOnly = true
+        inputWidth.value = 300
+
+        inputHeight.readOnly = true
+        inputHeight.value = 300
+
+        inputWidth.style.cursor = 'default'
+        inputHeight.style.cursor = 'default'
+
+        inputWidth.style.userSelect = 'none'
+        inputHeight.style.userSelect = 'none'
+
+        borderBoxWidth = 300
+        borderBoxHeight = 300
+
+        AlernativeSize()
+    }
+}
+
+function isInputNumber(event) {
+    let char = String.fromCharCode(event.which)
+
+    if (!(/[0-9]/.test(char))) {
+        event.preventDefault()
+    }
+}
+
+function reZise() {
+    borderBoxWidth = parseInt(inputWidth.value)
+    borderBoxHeight = parseInt(inputHeight.value)
+
+    AlernativeSize()
 }

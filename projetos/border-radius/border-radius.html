@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Borda</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="../../bootstrap/bootstrap.css">
 
     <link rel="stylesheet" href="estilos/estilo-border-radius.css">
 </head>
 <body>
+    <h1>Border Radius</h1>
+
     <section class="box">
         <div id="caixa">
             <div id="track-top"></div>
@@ -29,8 +33,31 @@
             <input type="range" min="0" max="100" value="10" id="slider-left-1" oninput="borderLeft()">
             <input type="range" min="0" max="100" value="90" id="slider-left-2" oninput="borderLeft()">
 
-            <div  id="borderBox">
+            <div  id="borderBox"></div>
+        </div>
 
+        <div class="caixaInput">
+            <input type="text" name="" id="borderInput" placeholder="" readonly>
+            <i class="far fa-copy" onclick="copyBorder()"></i>
+        </div>
+
+        <h2>Tamanho personalizado:</h2>
+
+        <div class="sizeInput">
+            <label id="label" class="labelOn">
+                <input type="checkbox" onclick="check()" id="check">
+                <span id="span"></span>
+                <span class="indicador"></span>
+            </label>
+
+            <div class="inputSize">
+                <h3>Largura (px):</h3>
+                <input type="text" name="" id="inputWidth" placeholder="300" onkeypress="isInputNumber(event)" onfocusout="reZise()" value="300" readonly>
+            </div>
+
+            <div class="inputSize">
+                <h3>Altura (px):</h3>
+                <input type="text" name="" id="inputHeight" placeholder="300" onkeypress="isInputNumber(event)" onfocusout="reZise()" value="300" readonly>
             </div>
         </div>
     </section>
