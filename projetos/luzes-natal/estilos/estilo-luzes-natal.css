@@ -1,0 +1,192 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212121;
+}
+
+h1 {
+    display: none;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    min-height: 600px;
+}
+
+.caixa {
+    padding: 80px;
+    position: relative;
+}
+
+.circle  {
+    border: 6px solid #333;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #212121;
+}
+
+.luz {
+    position: absolute;
+    background-color: aqua;
+    width: 40px;
+    height: 80px;
+    z-index: -1;
+    border-radius: 50% 50% 25% 25% / 60% 60% 40% 40%;
+}
+
+#luz1 {
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+
+    background-color: #ad3434;
+}
+
+#luz2 {
+    right: calc(25% - 0.25px);
+    top: calc(25% - 0.25px);
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+
+    background-color: #34ad37;
+}
+
+#luz3 {
+    right: 5px;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+
+    background-color: #ad3434;
+}
+
+#luz4 {
+    right: calc(25% - 0.25px);
+    bottom: calc(25% - 0.25px);
+    transform: translateX(50%) translateY(50%) rotate(135deg);
+
+    background-color: #34ad37;
+}
+
+#luz5 {
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%) rotate(180deg);
+
+    background-color: #ad3434;
+}
+
+#luz6 {
+    left: calc(25% - 0.25px);
+    bottom: calc(25% - 0.25px);
+    transform: translateX(-50%) translateY(50%) rotate(225deg);
+
+    background-color: #34ad37;
+}
+
+#luz7 {
+    left: 5px;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%) rotate(270deg);
+
+    background-color: #ad3434;
+}
+
+#luz8 {
+    left: calc(25% - 0.25px);
+    top: calc(25% - 0.25px);
+    transform: translateX(-50%) translateY(-50%) rotate(315deg);
+
+    background-color: #34ad37;
+}
+
+.on #luz1 {
+    animation: flashRed 4s both infinite;
+}
+
+.on #luz2 {
+    animation: flashGreen 4s both infinite;
+    animation-delay: 0.5s;
+}
+
+.on #luz3 {
+    animation: flashRed 4s both infinite;
+    animation-delay: 1s;
+}
+
+.on #luz4 {
+    animation: flashGreen 4s both infinite;
+    animation-delay: 1.5s;
+}
+
+.on #luz5 {
+    animation: flashRed 4s both infinite;
+    animation-delay: 2s;
+}
+
+.on #luz6 {
+    animation: flashGreen 4s both infinite;
+    animation-delay: 2.5s;
+}
+
+.on #luz7 {
+    animation: flashRed 4s both infinite;
+    animation-delay: 3s;
+}
+
+.on #luz8 {
+    animation: flashGreen 4s both infinite;
+    animation-delay: 3.5s;
+}
+
+@keyframes flashRed {
+    0%, 100% {
+        box-shadow: none;
+    }
+
+    12.5% {
+        box-shadow: 0px 0px 10px #ff0000,
+                    0px 0px 20px #ff0000,
+                    0px 0px 30px #ff0000,
+                    0px 0px 40px #ff0000,
+                    0px 0px 50px #ff0000,
+                    0px 0px 60px #ff0000,
+                    0px 0px 70px #ff0000,
+                    0px 0px 80px #ff0000,
+                    0px 0px 90px #ff0000,
+                    inset 0px 0px 40px #ff0000,
+                    inset 0px 0px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    25% {
+        box-shadow: none;
+    }
+}
+
+@keyframes flashGreen {
+    0%, 100% {
+        box-shadow: none;
+    }
+
+    12.5% {
+        box-shadow: 0px 0px 10px #00ff06,
+                0px 0px 20px #00ff06,
+                0px 0px 30px #00ff06,
+                0px 0px 40px #00ff06,
+                0px 0px 50px #00ff06,
+                0px 0px 60px #00ff06,
+                0px 0px 70px #00ff06,
+                0px 0px 80px #00ff06,
+                0px 0px 90px #00ff06,
+                inset 0px 0px 40px #00ff06,
+                inset 0px 0px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    25% {
+        box-shadow: none;
+    }
+}
