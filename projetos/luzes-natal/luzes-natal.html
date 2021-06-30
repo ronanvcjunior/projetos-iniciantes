@@ -16,7 +16,7 @@
     <h1>Luzes de Natal</h1>
 
     <section class="box container-fluid container-lg">
-        <div class="caixa on">
+        <div class="caixa play" id="caixa">
             <div class="circle"></div>
             <div class="luz" id="luz1"></div>
             <div class="luz" id="luz2"></div>
@@ -26,6 +26,17 @@
             <div class="luz" id="luz6"></div>
             <div class="luz" id="luz7"></div>
             <div class="luz" id="luz8"></div>
+        </div>
+
+        <div class="switch">
+            <label class="switch1">
+                <input type="checkbox" name="" id="checkBox" onclick="check()" checked>
+                <div>
+                    <span class="on">ON</span>
+                    <span class="off">OFF</span>
+                </div>
+                <i></i>
+            </label>
         </div>
     </section>
     <!-- Load Babel -->
