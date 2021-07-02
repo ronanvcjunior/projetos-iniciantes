@@ -111,16 +111,24 @@ section {
     width: 100%;
 }
 
-section #name {
+section .name {
     border-radius: 10px;
     display: inline-block;
     background-color: #f8f8f8;
     box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
                 4px 4px 10px rgba(0, 0, 0, 0.05);
-    font-size: 2rem;
-    color: #333;
     padding: 10px 20px;
     margin-bottom: 40px;
+}
+
+section .name input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4d5bf9;
 }
 
 section .information {
@@ -128,7 +136,37 @@ section .information {
     background-color: #f8f8f8;
     box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
                 4px 4px 10px rgba(0, 0, 0, 0.05);
-    color: #333;
     padding: 20px 20px;
     height: 100%;
+}
+
+section .information div {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
+                4px 4px 10px rgba(0, 0, 0, 0.05),
+                inset -4px -4px 10px rgba(255, 255, 255, 1),
+                inset 4px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+section .information div~div {
+    margin-top: 20px;
+}
+
+section .information div span {
+    width: auto;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    color: #333;
+    margin: 0 10px 0 20px;
+}
+
+section .information div input{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: #4d5bf9;
+    font-weight: bold;
 }
