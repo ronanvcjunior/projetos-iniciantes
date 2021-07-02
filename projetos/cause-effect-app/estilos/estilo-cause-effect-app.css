@@ -1,0 +1,134 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+nav {
+    margin: 20px;
+    min-width: 200px;
+    border-radius: 10px;
+    background-color: #4d5bf9;
+}
+
+nav ul {
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+nav ul li {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    
+    border-radius: 10px 0 0 10px;
+}
+
+nav ul li.active {
+    background-color: #f8f8f8;
+}
+
+nav ul li.active .title {
+    color: #333;
+}
+
+nav ul li .title {
+    padding-left: 10px;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #f8f8f8;
+}
+
+nav ul li .title:hover {
+    text-decoration:underline;
+
+}
+
+nav ul li.active .title:hover {
+    text-decoration: none;
+}
+
+nav ul li b:nth-child(1) {
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background-color: #f8f8f8;
+    display: none;
+}
+
+nav ul li.active b:nth-child(1){
+    display: initial;
+}
+
+nav ul li b:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background-color: #4d5bf9;
+}
+
+nav ul li b:nth-child(2) {
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background-color: #f8f8f8;
+    display: none;
+}
+
+nav ul li.active b:nth-child(2){
+    display: initial;
+}
+
+nav ul li b:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background-color: #4d5bf9;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 100%;
+}
+
+section #name {
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #f8f8f8;
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
+                4px 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 2rem;
+    color: #333;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+section .information {
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
+                4px 4px 10px rgba(0, 0, 0, 0.05);
+    color: #333;
+    padding: 20px 20px;
+    height: 100%;
+}
