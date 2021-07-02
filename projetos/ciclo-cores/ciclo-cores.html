@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ciclo de Cores</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="estilos/estilo-ciclo-cores.css">
+</head>
+<body class="">
+    <h1>Ciclo de Cores</h1>
+
+    <section class="box">
+        <div id="circle"></div>
+
+        <div class="colorInput">
+            <label id="label" class="labelOn">
+                <input type="checkbox" onclick="check()" id="check">
+                <span id="span"></span>
+                <span class="indicador"></span>
+                <span class="playPause">
+                    <b class="play">PLAY</b>
+                    <b class="pause">PAUSE</b>
+                </span>
+            </label>
+
+            <div class="inputs">
+                <div class="inputColor">
+                    <span>Adicionar Cor:</span>
+                    <input type="text" name="" id="inputColor" placeholder="ffffff / fff">
+                    <div>+</div>
+                </div>
+
+                <div class="inputTime">
+                    <span>Tempo:</span>
+                    <input type="text" name="" id="inputTime" placeholder="1 / 0.25">
+                </div>
+
+                <div id="cleanColor">Limpar Cores</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="js/js-ciclo-cores.js"></script>
+</body>
+</html>
