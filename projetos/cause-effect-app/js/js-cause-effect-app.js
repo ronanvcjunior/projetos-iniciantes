@@ -38,15 +38,15 @@ const pessoas = {
 }
 
 function setPessoa(pessoa) {
-    nome.value = pessoas.[pessoa].nome
-    idade.value = pessoas.[pessoa].idade
-    data_nascimento.value = pessoas.[pessoa].data_nascimento
-    cep.value =  pessoas.[pessoa].cep
-    endereco.value = pessoas.[pessoa].endereco
-    numero.value = pessoas.[pessoa].numero
-    bairro.value = pessoas.[pessoa].bairro
-    cidade.value = pessoas.[pessoa].cidade
-    estado.value = pessoas.[pessoa].estado
+    nome.value = pessoas[pessoa].nome
+    idade.value = pessoas[pessoa].idade
+    data_nascimento.value = pessoas[pessoa].data_nascimento
+    cep.value =  pessoas[pessoa].cep
+    endereco.value = pessoas[pessoa].endereco
+    numero.value = pessoas[pessoa].numero
+    bairro.value = pessoas[pessoa].bairro
+    cidade.value = pessoas[pessoa].cidade
+    estado.value = pessoas[pessoa].estado
     
 }
 
