@@ -31,17 +31,18 @@
 
             <div class="inputs">
                 <div class="inputColor">
+                    <div id="aviso">Insira um valor válido</div>
                     <span>Adicionar Cor:</span>
-                    <input type="text" name="" id="inputColor" placeholder="ffffff / fff">
-                    <div>+</div>
+                    <input type="text" name="" id="inputColor" placeholder="ffffff / fff" onkeypress="isInputHex(event)">
+                    <div id="pushColor" class="pushColorOFF" onclick="AdicionarColor()">+</div>
                 </div>
 
                 <div class="inputTime">
                     <span>Tempo:</span>
-                    <input type="text" name="" id="inputTime" placeholder="1 / 0.25">
+                    <input type="text" name="" id="inputTime" placeholder="1 / 0.25" onkeypress="isInputNumberAnpPoint(event)">
                 </div>
 
-                <div id="cleanColor">Limpar Cores</div>
+                <div id="cleanColor" onclick="limparCor()" onmousedown="mouseDown()" onmouseup="mouseUp()">Limpar Cores</div>
             </div>
         </div>
     </section>
