@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'digital';
+    src: url(../fontes/digital-7.ttf);
+}
+
+* {
+    font-family: 'digital';
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #292b2c;
+    min-height: 100vh;
+}
+
+#date {
+    background-color: transparent;
+    border: none;
+    color: #f8f8f8f8;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+section {
+    display: flex;
+    min-height: 100px;
+    min-width: 500px;
+}
+
+section .sep {
+    color: yellow;
+    line-height: 9rem;
+    font-size: 10rem;
+}
+
+section .date {
+    margin: 0 1rem;
+    padding: 0 1rem;
+}
+
+section .date .data {
+    text-align: center;
+    font-size: 10rem;
+    line-height: 9rem;
+    color: yellow;
+}
+
+section .date .linha {
+    height: 2px;
+    background-color: #f8f8f8f8;
+}
+
+section .date .escrita {
+    text-align: center;
+    font-family: consolas;
+    color: #f8f8f8f8;
+    letter-spacing: 0.2rem;
+}
