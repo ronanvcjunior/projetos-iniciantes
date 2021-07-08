@@ -1,0 +1,103 @@
+body {
+    background-color: #f8f8f8;
+    min-height: 100vh;
+    position: relative;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: perspective(100000px) translateX(-50%) translateY(-50%);
+    transition: 3s;
+    z-index: -1;
+}
+
+.image {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+.image {
+    background: rgba(255, 0, 0, 0.5);
+    transform: translateZ(200px);
+}
+
+.image:nth-child(2) {
+    background: rgba(0, 255, 0, 0.5);
+    transform:rotateX(90deg) translateZ(200px);
+}
+
+.image:nth-child(3) {
+    background: rgba(0, 0, 255, 0.5);
+    transform: rotateX(180deg) translateZ(200px);
+}
+
+.image:nth-child(4) {
+    background: rgba(255, 255, 0, 0.5);
+    transform: rotateX(270deg) translateZ(200px);
+}
+
+.image:nth-child(5) {
+    background: rgba(255, 0, 255, 0.5);
+    transform: rotateY(90deg)translateZ(200px);
+}
+
+.image:nth-child(6) {
+    background: rgba(0, 255, 255, 0.5);
+    transform: rotateY(270deg) translateZ(200px);
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: perspective(1000000px) translateX(-50%) translateY(-50%);
+    z-index: 1;
+}
+
+.fas {
+    position: absolute;
+    text-align: center;
+    text-justify: center;
+    font-size: 3rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.fas:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.fa-caret-up {
+    width: calc(100% - 96px);
+    left: 48px;
+}
+
+.fa-caret-down {
+    bottom: 0;
+    width: calc(100% - 96px);
+    left: 48px;
+}
+
+.fa-caret-left {
+    height: calc(100% - 96px);
+    width: 48px;
+    top: 48px;
+    line-height: 302px;
+}
+
+.fa-caret-right {
+    height: calc(100% - 96px);
+    width: 48px;
+    top: 48px;
+    right: 0;
+    line-height: 302px;
+}

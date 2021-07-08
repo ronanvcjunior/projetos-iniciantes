@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Alterar a Orientação das Imagens</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="estilos/estilo-flip-imagem.css">
+</head>
+<body class="">
+
+    <section id="cube">
+        <img src="https://picsum.photos/400/400" class="image">
+        <img src="https://picsum.photos/400/400" class="image">
+        <img src="https://picsum.photos/400/400" class="image">
+        <img src="https://picsum.photos/400/400" class="image">
+        <img src="https://picsum.photos/400/400" class="image">
+        <img src="https://picsum.photos/400/400" class="image">
+    </section>
+
+    <div class="buttons">
+        <i class="fas fa-caret-up" onclick="flip('top')"></i>
+        <i class="fas fa-caret-right" onclick="flip('right')"></i>
+        <i class="fas fa-caret-down" onclick="flip('bottom')"></i>
+        <i class="fas fa-caret-left" onclick="flip('left')"></i>
+    </div>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="js/js-flip-imagem.js"></script>
+</body>
+</html>
